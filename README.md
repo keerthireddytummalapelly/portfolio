@@ -19,8 +19,8 @@ You should also have npm or Yarn installed.
 
 1. Clone the repository on your local machine
 
-    ```git clone https://github.com/keerthireddytummalapelly/portfolio.git
-```
+    ```git clone https://github.com/keerthireddytummalapelly/portfolio.git```
+    
 2. Navigate to the project directory
     
     ```cd myportfolio```
