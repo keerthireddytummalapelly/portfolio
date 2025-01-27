@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Project
+
+## Description
+
+This is a personal portfolio website built with Next.js, Tailwind CSS, and Framer Motion. It showcases my experience, education, and projects with a modern, responsive design and smooth animations.
+
+Visit website: https://keerthiredddytummalapelly.com
 
 ## Getting Started
 
-First, run the development server:
+Follow these instructions to clone and run this project on your local machine.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ensure you have [Node.js](https://nodejs.org/) installed.
+You should also have npm or Yarn installed.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Installation 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone the repository on your local machine
 
-## Learn More
+    git clone https://github.com/keerthireddytummalapelly/portfolio.git
 
-To learn more about Next.js, take a look at the following resources:
+2. Navigate to the project directory
+    
+    cd myportfolio
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Install the dependencies using npm or Yarn
+      
+    With npm: npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    With Yarn: yarn install
 
-## Deploy on Vercel
+### Run the Project
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Start the development server:
+    
+    With npm: npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    With Yarn: yarn dev
+
+The project should now be running on http://localhost:3000. Open this URL in your web browser to view the application.
+
+### Build for production
+
+1. To create an optimized production build, run:
+
+    With npm: npm run build
+
+    With yarn: yarn build
+
+## Contact
+
+For any questions or support, please contact tummalapellykeerthireddy@gmail.com.

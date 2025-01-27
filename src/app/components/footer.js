@@ -9,7 +9,7 @@ const Footer = () => {
    
       <div className="flex justify-center items-center pb-6 text-gray-300">
         <Link
-          href="https://github.com/"
+          href="https://github.com/keerthireddytummalapelly/portfolio"
           target="_blank"
           className="cursor-pointer hover:text-primary"
         >

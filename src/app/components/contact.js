@@ -43,7 +43,7 @@ const Connect = () => {
     ];
 
     return (
-      <div className="flex flex-col md:flex-row items-center justify-between min-h-screen bg-transparent px-4">
+      <div className="flex flex-col md:flex-row items-center justify-between min-h-screen bg-transparent px-4 md:mt-0 mt-14">
         {/* Left Content */}
         <div className="md:w-1/2 flex flex-col justify-center items-start text-left">
           {/* Heading */}

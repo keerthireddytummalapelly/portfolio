@@ -123,7 +123,7 @@ const About = () => {
   };
 
   return (
-    <div className="bg-transparent flex flex-col px-4 sm:px-6 lg:px-8">
+    <div className="bg-transparent flex flex-col px-4 sm:px-6 lg:px-8 mt-14">
       {/* About Me Section */}
       <div className="text-left mb-12">
         <h1 className="text-5xl font-thin text-white mb-6">About Me</h1>
@@ -161,7 +161,7 @@ const About = () => {
           Technical Skills
         </h2>
         <motion.div
-          className="grid grid-cols-7 sm:grid-cols-8 lg:grid-cols-10 gap-6"
+          className="grid grid-cols-5 sm:grid-cols-7 lg:grid-cols-10 gap-6"
           variants={container}
           initial="hidden"
           animate="show"

@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { FaTimes } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +22,7 @@ const Header = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="#home" scroll={false}>
+          <Link href="#home" scroll={true}>
             <div className="cursor-pointer flex items-center space-x-2">
               <img
                 src="/logo2.png" // Replace with your logo image path
@@ -32,6 +34,13 @@ const Header = () => {
 
           {/* Navigation Links (Desktop) */}
           <nav className="hidden md:flex space-x-8">
+          <Link href="https://drive.google.com/file/d/1p5OUWUBEZHOhmnY0A2K1tYdPGdjv-zSV/view?usp=sharing" scroll={false}  target="_blank"
+        rel="noopener noreferrer"
+        passHref>
+              <span className="cursor-pointer font-thin text-white text-lg transition duration-300 hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent">
+                Resume
+              </span>
+            </Link>
             <Link href="#about" scroll={true}>
               <span className="cursor-pointer font-thin text-white text-lg transition duration-300 hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent">
                 About
@@ -52,24 +61,11 @@ const Header = () => {
           {/* Hamburger Menu */}
           <button
             onClick={toggleSidebar}
-            className="md:hidden text-gray-600 hover:text-black transition duration-300 focus:outline-none"
+            className="md:hidden text-white hover:text-gray-300 transition duration-300 focus:outline-none"
             aria-label="Toggle Menu"
           >
             {isOpen ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              <FaTimes className="h-6 w-6" />
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -103,23 +99,20 @@ const Header = () => {
             className="text-white self-end hover:text-white focus:outline-none"
             aria-label="Close Menu"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="white"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
+            <FaTimes className="h-6 w-6 text-white font-thin" />
           </button>
           <nav className="mt-8 space-y-4">
-            <Link href="#about" scroll={false}>
+            <Link href="https://drive.google.com/file/d/1p5OUWUBEZHOhmnY0A2K1tYdPGdjv-zSV/view?usp=sharing" scroll={false}  target="_blank"
+        rel="noopener noreferrer"
+        passHref>
+                <span
+                  className="cursor-pointer  mb-4 block text-white hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent text-lg transition duration-300"
+                  onClick={toggleSidebar}
+                >
+                  Resume
+                </span>
+              </Link>
+            <Link href="#about" scroll={true}>
               <span
                 className="cursor-pointer mb-4 block text-white hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent text-lg transition duration-300"
                 onClick={toggleSidebar}
@@ -127,15 +120,7 @@ const Header = () => {
                 About
               </span>
             </Link>
-            <Link href="#skills" scroll={false}>
-              <span
-                className="cursor-pointer  mb-4 block text-white hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent text-lg transition duration-300"
-                onClick={toggleSidebar}
-              >
-                Skills
-              </span>
-            </Link>
-            <Link href="#projects" scroll={false}>
+            <Link href="#projects" scroll={true}>
               <span
                 className="cursor-pointer  mb-4 block text-white hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent text-lg transition duration-300"
                 onClick={toggleSidebar}
@@ -143,7 +128,7 @@ const Header = () => {
                 Projects
               </span>
             </Link>
-            <Link href="#contact" scroll={false}>
+            <Link href="#contact" scroll={true}>
               <span
                 className="cursor-pointer  mb-4 block text-white hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent text-lg transition duration-300"
                 onClick={toggleSidebar}
