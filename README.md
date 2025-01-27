@@ -13,14 +13,14 @@ Follow these instructions to clone and run this project on your local machine.
 ### Prerequisites
 
 Ensure you have [Node.js](https://nodejs.org/) installed.
-You should also have npm or Yarn installed.
+You should also have npm installed.
 
 ### Installation 
 
 1. Clone the repository on your local machine
 
     ```git clone https://github.com/keerthireddytummalapelly/portfolio.git```
-    
+
 2. Navigate to the project directory
     
     ```cd myportfolio```
@@ -38,11 +38,6 @@ You should also have npm or Yarn installed.
 
 The project should now be running on http://localhost:3000. Open this URL in your web browser to view the application.
 
-### Build for production
-
-1. To create an optimized production build, run:
-
-     ```npm run build```
 
 ## Contact
 
