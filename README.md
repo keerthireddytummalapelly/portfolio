@@ -19,25 +19,22 @@ You should also have npm or Yarn installed.
 
 1. Clone the repository on your local machine
 
-    git clone https://github.com/keerthireddytummalapelly/portfolio.git
-
+    ```git clone https://github.com/keerthireddytummalapelly/portfolio.git
+```
 2. Navigate to the project directory
     
-    cd myportfolio
+    ```cd myportfolio```
 
 3. Install the dependencies using npm or Yarn
       
-    With npm: npm install
+   ``` npm install ```
 
-    With Yarn: yarn install
 
 ### Run the Project
 
 1. Start the development server:
     
-    With npm: npm run dev
-
-    With Yarn: yarn dev
+   ```npm run dev```
 
 The project should now be running on http://localhost:3000. Open this URL in your web browser to view the application.
 
@@ -45,9 +42,7 @@ The project should now be running on http://localhost:3000. Open this URL in you
 
 1. To create an optimized production build, run:
 
-    With npm: npm run build
-
-    With yarn: yarn build
+     ```npm run build```
 
 ## Contact
 
