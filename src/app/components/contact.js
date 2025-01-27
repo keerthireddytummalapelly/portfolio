@@ -47,8 +47,7 @@ const Connect = () => {
       <div className="md:w-1/2 flex flex-col justify-center items-start text-left">
         <h2 className="text-5xl font-thin mb-4 text-white">Let's Connect!!</h2>
         <p className="text-lg text-gray-300 mb-8 max-w-xl">
-          Let’s collaborate on a project, say hello on Gmail or LinkedIn, or
-          check out my work on GitHub and LeetCode.
+          Feel free to reach out — I love connecting over ideas that make a difference!
         </p>
         <div className="flex justify-start items-center space-x-8">
           {socialLinks.map((link, index) => (
