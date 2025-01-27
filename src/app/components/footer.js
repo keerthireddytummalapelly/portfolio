@@ -6,7 +6,6 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="items-center">
-   
       <div className="flex justify-center items-center pb-6 text-gray-300">
         <Link
           href="https://github.com/keerthireddytummalapelly/portfolio"

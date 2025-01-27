@@ -13,7 +13,6 @@ const Header = () => {
 
   return (
     <>
-      {/* Header */}
       <header
         className="fixed top-0 left-0 w-full text-gray-300 z-50 drop-shadow-[0_1px_2px_rgba(255,255,255,0.25)]"
         style={{
@@ -21,22 +20,20 @@ const Header = () => {
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-          {/* Logo */}
           <Link href="#home" scroll={true}>
             <div className="cursor-pointer flex items-center space-x-2">
-              <img
-                src="/logo2.png" // Replace with your logo image path
-                alt="Logo"
-                className="w-28 h-15"
-              />
+              <img src="/logo2.png" alt="Logo" className="w-28 h-15" />
             </div>
           </Link>
 
-          {/* Navigation Links (Desktop) */}
           <nav className="hidden md:flex space-x-8">
-          <Link href="https://drive.google.com/file/d/1p5OUWUBEZHOhmnY0A2K1tYdPGdjv-zSV/view?usp=sharing" scroll={false}  target="_blank"
-        rel="noopener noreferrer"
-        passHref>
+            <Link
+              href="https://drive.google.com/file/d/1p5OUWUBEZHOhmnY0A2K1tYdPGdjv-zSV/view?usp=sharing"
+              scroll={false}
+              target="_blank"
+              rel="noopener noreferrer"
+              passHref
+            >
               <span className="cursor-pointer font-thin text-white text-lg transition duration-300 hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent">
                 Resume
               </span>
@@ -58,7 +55,6 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* Hamburger Menu */}
           <button
             onClick={toggleSidebar}
             className="md:hidden text-white hover:text-gray-300 transition duration-300 focus:outline-none"
@@ -86,7 +82,6 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Sidebar */}
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-black text-white transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
@@ -102,16 +97,20 @@ const Header = () => {
             <FaTimes className="h-6 w-6 text-white font-thin" />
           </button>
           <nav className="mt-8 space-y-4">
-            <Link href="https://drive.google.com/file/d/1p5OUWUBEZHOhmnY0A2K1tYdPGdjv-zSV/view?usp=sharing" scroll={false}  target="_blank"
-        rel="noopener noreferrer"
-        passHref>
-                <span
-                  className="cursor-pointer  mb-4 block text-white hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent text-lg transition duration-300"
-                  onClick={toggleSidebar}
-                >
-                  Resume
-                </span>
-              </Link>
+            <Link
+              href="https://drive.google.com/file/d/1p5OUWUBEZHOhmnY0A2K1tYdPGdjv-zSV/view?usp=sharing"
+              scroll={false}
+              target="_blank"
+              rel="noopener noreferrer"
+              passHref
+            >
+              <span
+                className="cursor-pointer  mb-4 block text-white hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent text-lg transition duration-300"
+                onClick={toggleSidebar}
+              >
+                Resume
+              </span>
+            </Link>
             <Link href="#about" scroll={true}>
               <span
                 className="cursor-pointer mb-4 block text-white hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent text-lg transition duration-300"
@@ -140,7 +139,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Overlay */}
       {isOpen && (
         <div
           onClick={toggleSidebar}

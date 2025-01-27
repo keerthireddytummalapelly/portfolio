@@ -99,32 +99,31 @@ const About = () => {
       name: "PostgreSQL",
       link: "https://www.postgresql.org/",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-    }
+    },
   ];
 
   const container = {
-    hidden: { opacity: 0 }, // Start hidden
+    hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15, // Delay between items
-        delayChildren: 0, // Delay before starting
+        staggerChildren: 0.2,
       },
-    },
-    exit: {
-      opacity: 0, // Fade out everything
-      transition: { delay: 1 }, // Add a slight delay before everything disappears
     },
   };
 
   const item = {
-    hidden: { scale: 0, opacity: 0 }, // Start small and invisible
-    show: { scale: 1, opacity: 1, transition: { type: "spring", stiffness: 300 } },
+    hidden: { opacity: 0, scale: 0.8, y: 50 },
+    show: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 300, damping: 20 },
+    },
   };
 
   return (
     <div className="bg-transparent flex flex-col px-4 sm:px-6 lg:px-8 mt-14">
-      {/* About Me Section */}
       <div className="text-left mb-12">
         <h1 className="text-5xl font-thin text-white mb-6">About Me</h1>
         <ul className="text-lg sm:text-xl font-medium text-gray-300 leading-relaxed space-y-4">
@@ -134,7 +133,8 @@ const About = () => {
               src="https://images.emojiterra.com/google/noto-emoji/animated-emoji/26a1.gif"
               className="w-6 h-6 mr-2"
             />
-            Experienced in full-stack development, cloud computing, and machine learning, with a passion for building impactful, scalable solutions.
+            Experienced in full-stack development, cloud computing, and machine
+            learning, with a passion for building impactful, scalable solutions.
           </li>
           <li className="flex items-start">
             <img
@@ -142,7 +142,8 @@ const About = () => {
               src="https://images.emojiterra.com/google/noto-emoji/animated-emoji/26a1.gif"
               className="w-6 h-6 mr-2"
             />
-            Enthusiastic problem solver, actively exploring coding challenges on LeetCode and staying updated with industry trends.
+            Enthusiastic problem solver, actively exploring coding challenges on
+            LeetCode and staying updated with industry trends.
           </li>
           <li className="flex items-start">
             <img
@@ -150,26 +151,20 @@ const About = () => {
               src="https://images.emojiterra.com/google/noto-emoji/animated-emoji/26a1.gif"
               className="w-6 h-6 mr-2"
             />
-            Skilled in mentoring and leadership, having guided over 200 graduate students as a Teaching Assistant.
+            Skilled in mentoring and leadership, having guided over 200 graduate
+            students as a Teaching Assistant.
           </li>
         </ul>
       </div>
 
-      {/* Languages & Skills Section */}
       <div className="text-left">
-        <h2 className="text-5xl font-thin text-white mb-8">
-          Technical Skills
-        </h2>
+        <h2 className="text-5xl font-thin text-white mb-8">Technical Skills</h2>
         <motion.div
           className="grid grid-cols-5 sm:grid-cols-7 lg:grid-cols-10 gap-6"
           variants={container}
           initial="hidden"
-          animate="show"
-          exit="exit"
-          onAnimationComplete={() => {
-            // Trigger re-animation after it ends
-            setTimeout(() => window.location.reload(), 2000); // Or trigger an internal state reset
-          }}
+          whileInView="show"
+          viewport={{ once: false, amount: 0.5 }}
         >
           {skills.map((skill, index) => (
             <motion.a
