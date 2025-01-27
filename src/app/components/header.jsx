@@ -1,0 +1,170 @@
+"use client";
+import React, { useState } from "react";
+import Link from "next/link";
+
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <>
+      {/* Header */}
+      <header
+        className="fixed top-0 left-0 w-full text-gray-300 z-50 drop-shadow-[0_1px_2px_rgba(255,255,255,0.25)]"
+        style={{
+          backgroundColor: "#000000",
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="#home" scroll={false}>
+            <div className="cursor-pointer flex items-center space-x-2">
+              <img
+                src="/logo2.png" // Replace with your logo image path
+                alt="Logo"
+                className="w-28 h-15"
+              />
+            </div>
+          </Link>
+
+          {/* Navigation Links (Desktop) */}
+          <nav className="hidden md:flex space-x-8">
+            <Link href="#about" scroll={true}>
+              <span className="cursor-pointer font-thin text-white text-lg transition duration-300 hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent">
+                About
+              </span>
+            </Link>
+            <Link href="#projects" scroll={true}>
+              <span className="cursor-pointer font-thin text-white text-lg transition duration-300 hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent">
+                Projects
+              </span>
+            </Link>
+            <Link href="#contact" scroll={true}>
+              <span className="cursor-pointer font-thin text-white text-lg transition duration-300 hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent">
+                Contact
+              </span>
+            </Link>
+          </nav>
+
+          {/* Hamburger Menu */}
+          <button
+            onClick={toggleSidebar}
+            className="md:hidden text-gray-600 hover:text-black transition duration-300 focus:outline-none"
+            aria-label="Toggle Menu"
+          >
+            {isOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
+      </header>
+
+      {/* Sidebar */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-black text-white transform ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 ease-in-out z-40`}
+        aria-hidden={!isOpen}
+      >
+        <div className="flex flex-col h-full p-4">
+          <button
+            onClick={toggleSidebar}
+            className="text-white self-end hover:text-white focus:outline-none"
+            aria-label="Close Menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="white"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <nav className="mt-8 space-y-4">
+            <Link href="#about" scroll={false}>
+              <span
+                className="cursor-pointer mb-4 block text-white hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent text-lg transition duration-300"
+                onClick={toggleSidebar}
+              >
+                About
+              </span>
+            </Link>
+            <Link href="#skills" scroll={false}>
+              <span
+                className="cursor-pointer  mb-4 block text-white hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent text-lg transition duration-300"
+                onClick={toggleSidebar}
+              >
+                Skills
+              </span>
+            </Link>
+            <Link href="#projects" scroll={false}>
+              <span
+                className="cursor-pointer  mb-4 block text-white hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent text-lg transition duration-300"
+                onClick={toggleSidebar}
+              >
+                Projects
+              </span>
+            </Link>
+            <Link href="#contact" scroll={false}>
+              <span
+                className="cursor-pointer  mb-4 block text-white hover:bg-gradient-to-r hover:from-[#a855f7] hover:via-[#d946ef] hover:to-[#ec4899] hover:bg-clip-text hover:text-transparent text-lg transition duration-300"
+                onClick={toggleSidebar}
+              >
+                Contact
+              </span>
+            </Link>
+          </nav>
+        </div>
+      </div>
+
+      {/* Overlay */}
+      {isOpen && (
+        <div
+          onClick={toggleSidebar}
+          className="fixed inset-0 bg-black bg-opacity-50 z-30"
+          aria-hidden={!isOpen}
+        />
+      )}
+    </>
+  );
+};
+
+export default Header;
