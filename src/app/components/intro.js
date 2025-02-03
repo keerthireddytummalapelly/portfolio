@@ -49,7 +49,7 @@ const Intro = () => {
 
   return (
     <div className="flex flex-col md:flex-row items-center justify-center md:justify-between h-screen text-black px-4 sm:px-6 lg:px-8">
-      <div className="w-full md:w-2/3 text-center md:text-left">
+      <div className="w-full md:w-2/3 text-left">
         <h1 className="text-3xl lg:text-5xl font-thin mb-4 text-white">
           Hello, I'm <br />
           <span className="bg-gradient-to-r font-bold from-[#a855f7] via-[#d946ef] to-[#ec4899] bg-clip-text text-transparent inline-flex items-center whitespace-nowrap mt-4">
@@ -68,7 +68,7 @@ const Intro = () => {
           impactful solutions.
         </p>
 
-        <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-6 items-center">
+        <div className="flex flex-wrap justify-start gap-4 mt-6 items-center">
           {socialLinks.map((link, index) => (
             <Link
               key={index}
@@ -83,7 +83,7 @@ const Intro = () => {
           ))}
         </div>
 
-        <div className="flex justify-center md:justify-start items-center gap-4 lg:gap-8 mt-6">
+        <div className="flex justify-start items-center gap-4 lg:gap-8 mt-6">
           <Link
             href="https://drive.google.com/file/d/1p5OUWUBEZHOhmnY0A2K1tYdPGdjv-zSV/view?usp=sharing"
             target="_blank"
