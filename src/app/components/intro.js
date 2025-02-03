@@ -58,7 +58,7 @@ const Intro = () => {
               alt="👋"
               draggable="false"
               src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f44b.png"
-              className="w-8 h-8 md:w-12 md:h-12 ml-2 wave-emoji"
+              className="hidden md:block w-8 h-8 md:w-12 md:h-12 ml-2 wave-emoji"
             />
           </span>
         </h1>

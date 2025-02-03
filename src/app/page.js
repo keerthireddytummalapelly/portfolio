@@ -12,7 +12,7 @@ export default function Home() {
       <Header className="sticky top-0 left-0 w-full z-50" />
 
       {/* Sections */}
-      <section id="intro" className="px-6 py-12">
+      <section id="intro" className="md:px-6 md:py-12">
         <Intro />
       </section>
       <section id="about" className="px-6 py-12">

@@ -14,7 +14,7 @@ const projects = [
     id: 2,
     title: "Note Vault",
     description:
-      "A web application for efficient note organization, integrated with AI-powered note summarization and grammar correction.",
+      "A user-friendly note management application integrating AI for summarization and grammar correction, streamlining organization for productivity-driven users.",
     image:
       "https://us.images.westend61.de/0001401237pw/high-angle-view-of-pen-and-book-on-table-EYF07304.jpg",
     link: "https://github.com/keerthireddytummalapelly/NoteVault",
@@ -23,7 +23,7 @@ const projects = [
     id: 3,
     title: "Cache Sync",
     description:
-      "A TCP/UDP file transfer system with a caching layer to reduce server load.",
+      "A high-performance file transfer system that reduced server load by 50%, designed to handle scalable workloads with efficiency.",
     image:
       "https://miro.medium.com/v2/resize:fit:640/1*6tIUkEvBFFe3JA88A9Jwew.jpeg",
     link: "https://github.com/keerthireddytummalapelly/CacheSync",
