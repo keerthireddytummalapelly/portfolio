@@ -20,7 +20,7 @@ const Intro = () => {
     },
     {
       title: "LinkedIn",
-      href: "https://www.linkedin.com/in/keerthi-reddy-tummalapelly",
+      href: "https://www.linkedin.com/in/keerthi--t",
       icon: <FaLinkedin />,
       bgcolor: "bg-blue-500",
       borderColor: "border-transparent",
@@ -38,7 +38,7 @@ const Intro = () => {
     },
     {
       title: "LeetCode",
-      href: "https://leetcode.com/keerthireddytummalapelly",
+      href: "https://leetcode.com/u/keerthireddy19/",
       icon: <SiLeetcode />,
       bgcolor: "bg-orange-500",
       borderColor: "border-transparent",
